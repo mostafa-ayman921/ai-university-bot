@@ -28,7 +28,7 @@ client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
 @st.cache_data(ttl=3600, show_spinner="بحدّث الملفات من Drive...")
 def sync_drive():
-       gdown.download_folder(url=FOLDER_URL, output=str(FILES_DIR), quiet=True)
+    gdown.download_folder(url=FOLDER_URL, output=str(FILES_DIR), quiet=True)
     return time.time()
 
 
